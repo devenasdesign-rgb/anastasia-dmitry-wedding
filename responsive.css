@@ -107,3 +107,7 @@
 .meeting-time{display:flex;flex-direction:column;align-items:center;gap:3cqw;margin-top:7cqw;padding-top:6cqw;border-top:1px solid #80212e25}
 .meeting-time>span{font-size:5.5cqw}
 .meeting-time>time{font:9cqw/1.2 Laguna,Georgia,serif}
+
+/* Match the browser canvas and overscroll areas to the invitation. */
+html,body{background-color:#f9f3e8;color-scheme:light}
+@media(max-width:767px){body{min-height:100dvh}.invitation-shell{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);background:#f9f3e8}}
