@@ -90,3 +90,7 @@
  .closing-card.reveal.is-visible{transform:translateY(0) scale(1)}
 }
 @media(prefers-reduced-motion:reduce){.reading-progress{display:none}.reveal{filter:none!important;transform:none!important;opacity:1!important}}
+
+/* Leave room for calligraphic overhangs; Safari must not crop text filters. */
+.dress-copy h2{font-size:8.6cqw;padding:.12em .3em .18em .1em;overflow:visible}
+.reveal:not(.reveal-art){filter:none!important}
