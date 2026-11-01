@@ -19,6 +19,8 @@
   <script src="motion.js" defer></script>
   <script src="countdown.js" defer></script>
   <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="film.css">
+  <script src="film.js" defer></script>
 </head>
 <body>
 <aside class="desktop-notice" aria-label="Откройте приглашение на телефоне">
@@ -40,7 +42,11 @@
 <div class="invitation-shell"><main class="invitation">
   <header class="hero">
     <h1 class="names"><span class="anastasia">Анастасия</span><span class="ampersand">&</span><span class="dmitry">Дмитрий</span></h1>
-    <img class="couple" src="assets/couple.png" width="628" height="844" alt="Нарисованные жених и невеста с табличками 11 и 11">
+    <div class="couple film-scene couple-scene" role="img" aria-label="Рисованная пара нежно сближается за табличками с датой">
+      <img class="scene-fallback" src="assets/couple.png" width="628" height="844" alt="">
+      <div class="couple-ground" aria-hidden="true"></div><div class="couple-bride" aria-hidden="true"></div><div class="couple-groom" aria-hidden="true"></div>
+      <span class="scene-heart heart-one" aria-hidden="true">♡</span><span class="scene-heart heart-two" aria-hidden="true">♥</span>
+    </div>
     <time class="wedding-date" datetime="2026-11-11">11.11.2026</time>
     <div class="countdown" hidden role="timer" aria-live="off" aria-label="До встречи за свадебным ужином">
       <p class="countdown-title">До нашей встречи</p>
@@ -81,7 +87,28 @@
   <section class="dinner" aria-labelledby="warm-evening">
     <h2 id="warm-evening">Тёплый вечер вместе</h2>
     <p class="copy inset">Нет никаких расписаний и программ, наш простой свадебный ужин, чтобы мы просто провели время в кругу самых близких.</p>
-    <img class="dinner-illustration" src="assets/dinner.png" width="780" height="944" alt="Девять близких за семейным свадебным столом" loading="lazy">
+    <div class="dinner-illustration film-scene dinner-scene" role="img" aria-label="Ожившая иллюстрация семейного ужина: гости покачиваются, свечи мерцают, бокалы сверкают">
+      <img class="scene-fallback" src="assets/dinner.png" width="780" height="944" alt="" loading="lazy">
+      <svg class="dinner-drawing" viewBox="0 0 780 944" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <clipPath id="toast-couple"><polygon points="248,35 540,35 540,235 410,280 240,250"/></clipPath>
+          <clipPath id="toast-left"><polygon points="50,150 240,150 240,250 245,300 230,480 275,650 200,780 50,780"/></clipPath>
+          <clipPath id="toast-right"><polygon points="545,150 740,150 740,800 550,800 500,670 550,520 525,410 530,280"/></clipPath>
+          <mask id="dinner-still"><rect width="780" height="944" fill="white"/><polygon points="248,35 540,35 540,235 410,280 240,250" fill="black"/><polygon points="50,150 240,150 240,250 245,300 230,480 275,650 200,780 50,780" fill="black"/><polygon points="545,150 740,150 740,800 550,800 500,670 550,520 525,410 530,280" fill="black"/></mask>
+        </defs>
+        <image href="assets/dinner.png" width="780" height="944" mask="url(#dinner-still)"/>
+        <g class="toast-couple" clip-path="url(#toast-couple)"><image href="assets/dinner.png" width="780" height="944"/></g>
+        <g class="toast-left" clip-path="url(#toast-left)"><image href="assets/dinner.png" width="780" height="944"/></g>
+        <g class="toast-right" clip-path="url(#toast-right)"><image href="assets/dinner.png" width="780" height="944"/></g>
+        <g class="toast-sparkles" fill="none" stroke="#a93644" stroke-width="2" stroke-linecap="round">
+          <path class="sparkle sparkle-one" d="M380 131v-12m-9 15-7-8m25 8 7-8"/>
+          <path class="sparkle sparkle-two" d="M278 205v-10m-8 14-7-7m23 7 7-7"/>
+          <path class="sparkle sparkle-three" d="M548 306v-10m-8 14-7-7m23 7 7-7"/>
+        </g>
+        <ellipse class="candle-glow candle-one" cx="391" cy="284" rx="5" ry="10" fill="#bd7754" opacity=".45"/>
+        <ellipse class="candle-glow candle-two" cx="418" cy="532" rx="4" ry="9" fill="#bd7754" opacity=".45"/>
+      </svg>
+    </div>
   </section>
 
   <section class="location inset" aria-labelledby="meeting">

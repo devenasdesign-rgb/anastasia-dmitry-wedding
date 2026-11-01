@@ -1,0 +1,35 @@
+/* Animated illustration layers. Static drawings remain the no-JS fallback. */
+.film-scene{position:relative;isolation:isolate;overflow:visible}
+.couple-scene{position:absolute}
+.scene-fallback{display:block;width:100%;height:100%;object-fit:contain}
+.couple-bride,.couple-groom{display:none;position:absolute;inset:0;background:url('assets/couple.png') center/100% 100% no-repeat;will-change:transform}
+.couple-bride{clip-path:polygon(0 0,55% 0,55% 38%,56% 52%,70% 82%,76% 91%,0 100%);transform-origin:36% 85%}
+.couple-groom{clip-path:polygon(55% 0,100% 0,100% 100%,0 100%,76% 91%,70% 82%,56% 52%,55% 38%);transform-origin:76% 85%}
+.scene-heart{display:none;position:absolute;color:#a93644;line-height:1;font-family:Georgia,serif;opacity:0;pointer-events:none}
+.heart-one{left:49%;top:16%;font-size:6cqw;rotate:-15deg}
+.heart-two{left:60%;top:11%;font-size:3cqw;rotate:15deg}
+.scene-ready .scene-fallback{visibility:hidden}
+.couple-scene.scene-ready .couple-bride,.couple-scene.scene-ready .couple-groom,.couple-scene.scene-ready .scene-heart{display:block}
+.dinner-drawing{display:none;position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.scene-ready .dinner-drawing{display:block}
+.toast-couple{transform-origin:390px 260px}
+.toast-left{transform-origin:200px 680px}
+.toast-right{transform-origin:570px 680px}
+.sparkle{opacity:0}
+.candle-glow{transform-box:fill-box;transform-origin:center bottom}
+.scene-in-view .candle-glow{animation:candle-breathe 1.5s ease-in-out infinite alternate}
+.scene-in-view .candle-two{animation-delay:-.8s}
+.scene-in-view .sparkle{animation:glass-glint 4s ease-in-out infinite}
+.scene-in-view .sparkle-two{animation-delay:-1.3s}
+.scene-in-view .sparkle-three{animation-delay:-2.6s}
+@keyframes candle-breathe{from{opacity:.2;scale:.8 1.1}to{opacity:.65;scale:1.1 .8}}
+@keyframes glass-glint{0%,35%,70%,100%{opacity:0}45%,55%{opacity:.8}}
+@media(prefers-reduced-motion:reduce){.film-scene .scene-fallback{visibility:visible}.couple-bride,.couple-groom,.scene-heart,.dinner-drawing{display:none!important}.candle-glow,.sparkle{animation:none!important}}
+
+/* Keep the lower silhouette still, and lean only upper bodies. */
+.couple-ground{display:none;position:absolute;inset:0;background:url('assets/couple.png') center/100% 100% no-repeat;mask-image:linear-gradient(transparent 0%,transparent 45%,#000 54%);-webkit-mask-image:linear-gradient(transparent 0%,transparent 45%,#000 54%)}
+.scene-ready .couple-ground{display:block}
+.couple-bride,.couple-groom{mask-image:linear-gradient(#000 0%,#000 45%,transparent 54%);-webkit-mask-image:linear-gradient(#000 0%,#000 45%,transparent 54%)}
+.couple-bride{transform-origin:36% 52%}
+.couple-groom{transform-origin:76% 52%}
+@media(prefers-reduced-motion:reduce){.couple-ground{display:none!important}}
