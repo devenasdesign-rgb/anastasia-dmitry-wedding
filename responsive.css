@@ -1,0 +1,92 @@
+/* Container units scale typography, artwork and spacing with the phone width. */
+.invitation-shell{width:100%;max-width:600px;margin:auto;container-type:inline-size}
+.desktop-notice{display:none}
+
+
+
+
+
+:root{--paper:#f9f3e8;--red:#80212e;--map:#f0e5d6;--line:#b27d7a}
+*{box-sizing:border-box}html{background:#e9dfd0;scroll-behavior:smooth}body{margin:0;color:var(--red);font-family:'Cormorant Garamond',Georgia,serif;font-size:5.38462cqw;line-height:1.1}img{display:block;max-width:100%;height:auto}h1,h2,h3,p,figure{margin:0}h2{font-family:'Great Vibes',cursive;font-weight:400;font-size:10.76923cqw;line-height:1.252}p+p{margin-top:5.89744cqw}.invitation{width:min(100%,100.00000cqw);margin:auto;background:var(--paper);overflow:hidden;text-align:center;box-shadow:0 0 15.38462cqw #4d293015}.inset{margin-inline:7.69231cqw}.copy{font-size:5.38462cqw;line-height:1.1}.decoration{position:absolute;pointer-events:none}.hero{height:166.66667cqw;position:relative;padding-top:11.53846cqw}.names{position:relative;height:36.41026cqw;font-family:'Great Vibes',cursive;font-size:18.68718cqw;font-weight:400;line-height:1.252}.anastasia{position:absolute;width:66.41026cqw;left:5.12821cqw;top:0}.dmitry{position:absolute;width:65.89744cqw;right:7.69231cqw;top:13.07692cqw;-webkit-text-stroke:1.02564cqw var(--paper);paint-order:stroke fill}.ampersand{position:absolute;left:17.94872cqw;top:18.71795cqw;font:10.46154cqw/1.12 Laguna,serif}.couple{position:absolute;top:42.05128cqw;left:9.74359cqw;width:80.51282cqw;height:108.20513cqw;object-fit:contain}.wedding-date{position:absolute;top:148.71795cqw;left:0;right:0;font:700 8.39231cqw/1.14 Laguna,serif}.intro{position:relative;padding-top:11.28205cqw;min-height:97.94872cqw}.intro .copy{margin-top:5.89744cqw}.glasses{width:17.43590cqw;height:24.10256cqw;right:-3.84615cqw;top:24.87179cqw}.rings{width:17.17949cqw;height:13.58974cqw;left:-5.38462cqw;bottom:6.41026cqw}.story h2{margin-bottom:4.35897cqw}.messages{width:51.28205cqw;height:28.20513cqw;margin:0 auto 7.69231cqw;object-fit:contain}.story-copy{min-height:58.97436cqw}.memory{position:relative;margin-top:7.69231cqw;height:125.64103cqw;width:94.23077cqw;margin-left:5.38462cqw}.memory-photo{position:absolute;left:19.23077cqw;top:26.41026cqw;width:55.75128cqw;height:72.88974cqw;border-radius:3.43590cqw;object-fit:cover}.lace{position:absolute;inset:0;width:94.23077cqw;height:125.64103cqw;object-fit:fill}.dinner{padding-top:15.64103cqw}.dinner h2{font-size:9.48718cqw;line-height:1.252}.dinner>.copy{margin-top:3.84615cqw}.dinner-illustration{width:100.00000cqw;height:121.02564cqw;object-fit:contain;margin-top:5.12821cqw}.location{padding-top:12.30769cqw}.date-card{position:relative;background:var(--red);color:var(--paper);height:24.61538cqw;margin-top:5.64103cqw;display:grid;place-items:center}.date-card time{font:7.94872cqw/1.2 Laguna,serif}.date-card time span{font-family:'Cormorant Garamond',Georgia,serif}.cake{width:20.76923cqw;height:22.56410cqw;object-fit:contain;right:-2.30769cqw;bottom:-9.48718cqw}.location h3{font-size:6.92308cqw;font-style:italic;font-weight:600;line-height:1.21;margin-top:5.64103cqw}.location address{font-size:5.89744cqw;line-height:1.05;font-style:normal;margin-top:0.25641cqw}.map-placeholder{height:56.41026cqw;background:var(--map);border:0.25641cqw solid var(--line);margin-top:6.41026cqw;display:flex;align-items:center;justify-content:center;font:4.61538cqw/1.21 Arial,sans-serif;flex-direction:column}.map-link{display:grid;place-items:center;height:12.82051cqw;margin-top:3.07692cqw;background:var(--red);color:var(--paper);font-size:5.89744cqw;text-decoration:none;transition:background .2s}.map-link:hover{background:#a03545}.map-link:focus-visible{outline:0.51282cqw solid var(--red);outline-offset:1.28205cqw}.dress-code{position:relative;height:79.74359cqw;margin-top:18.46154cqw}.dress-code>img{position:absolute;width:51.28205cqw;height:76.92308cqw;object-fit:contain;left:3.84615cqw;top:0}.dress-copy{position:relative;margin-left:auto;margin-right:7.69231cqw;width:37.17949cqw;text-align:right}.dress-copy h2{width:58.97436cqw;margin-left:-21.79487cqw;white-space:nowrap}.dress-copy p{font-size:5.89744cqw;line-height:1.05;margin-top:5.64103cqw}.closing{position:relative;min-height:170.51282cqw;padding:15.12821cqw 7.69231cqw 29.74359cqw;isolation:isolate}.closing-pattern{position:absolute;max-width:none;width:258.97436cqw;height:170.51282cqw;left:50%;top:0;transform:translateX(-50%);object-fit:contain;z-index:-1}.closing-card{background:var(--red);color:var(--paper);min-height:125.64103cqw;padding:16.41026cqw 3.58974cqw 15.38462cqw}.closing-card h2{font-size:10.76923cqw;white-space:nowrap;margin-inline:-3.58974cqw}.closing-card .copy{font-size:5.89744cqw;line-height:1.05;margin-top:5.89744cqw}.closing-card .copy p+p{margin-top:6.15385cqw}.signature{font:9.48718cqw/1.252 'Great Vibes',cursive;margin-top:11.28205cqw;white-space:nowrap;margin-inline:-3.58974cqw}.sr-only{position:absolute;width:0.25641cqw;height:0.25641cqw;padding:0;margin:-0.25641cqw;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.map-link{transition:none}}
+.hero.has-countdown{height:197.43590cqw}.countdown{position:absolute;top:165.12821cqw;left:7.69231cqw;right:7.69231cqw;color:var(--red)}.countdown[hidden]{display:none}.countdown-title{font:5.38462cqw/1.2 'Cormorant Garamond',Georgia,serif;margin-bottom:4.35897cqw}.countdown-digits{display:flex;align-items:flex-start;justify-content:center;gap:2.30769cqw}.countdown-digits>div{min-width:12.30769cqw;display:flex;flex-direction:column;gap:1.28205cqw}.countdown-digits span{font:8.20513cqw/1 Laguna,Georgia,serif;font-variant-numeric:tabular-nums}.countdown-digits small{font:3.84615cqw/1.2 'Cormorant Garamond',Georgia,serif}.countdown-digits b{font:5.89744cqw/1.25 'Cormorant Garamond',Georgia,serif;font-weight:400;opacity:.55}
+.memory-photo{transition:opacity .35s ease;opacity:1}.memory-photo-next{opacity:0}.lace{pointer-events:none}@media(prefers-reduced-motion:reduce){.memory-photo{transition:none}}
+
+/* Comfortable vertical rhythm between sections. */
+.hero.has-countdown{height:205.12821cqw}
+.intro{padding-top:18.46154cqw;min-height:115.38462cqw}
+.intro .copy{margin-top:8.20513cqw}
+.story h2{margin-bottom:8.20513cqw}
+.messages{margin-bottom:11.28205cqw}
+.story-copy{min-height:66.66667cqw;line-height:1.2}
+.memory{margin-top:14.35897cqw}
+.dinner{padding-top:24.61538cqw}
+.dinner>.copy{margin-top:8.20513cqw;line-height:1.2}
+.dinner-illustration{margin-top:10.25641cqw}
+.location{padding-top:20.51282cqw}
+.date-card{margin-top:8.20513cqw}
+.location h3{margin-top:10.76923cqw}
+.location address{margin-top:3.07692cqw;line-height:1.15}
+.map-link{margin-top:4.61538cqw}
+.dress-code{margin-top:28.71795cqw;height:87.17949cqw}
+.dress-copy p{margin-top:8.20513cqw;line-height:1.15}
+.closing{margin-top:16.41026cqw;min-height:184.61538cqw;padding-top:18.46154cqw;padding-bottom:30.76923cqw}
+.closing-pattern{height:100%;object-fit:cover}
+.closing-card{min-height:135.89744cqw;padding-top:19.48718cqw;padding-bottom:19.48718cqw}
+.closing-card .copy{margin-top:8.20513cqw;line-height:1.15}
+.closing-card .copy p+p{margin-top:8.20513cqw}
+.signature{margin-top:13.33333cqw}
+
+/* Small repeating motifs keep the final backdrop crisp. */
+.closing{background-image:url("assets/pattern-tile.png");background-repeat:repeat;background-size:87.17949cqw auto;background-position:center top}
+.closing-pattern{display:none}
+
+.invitation{width:100%;max-width:none;border-radius:0}
+.venue-map{height:66.66667cqw;margin-top:9.23077cqw}
+.invitation .map-link{height:12.82051cqw}
+.desktop-notice-card{max-width:480px;text-align:center;color:#80212e;padding:40px 28px;background:#f9f3e8;border:1px solid #dbc7b3;box-shadow:0 18px 60px #64352812}
+.desktop-notice-card h2{font:46px/1.3 'Great Vibes',cursive;margin:18px 0 24px}
+.desktop-notice-card p{font:23px/1.3 'Cormorant Garamond',Georgia,serif}
+.desktop-notice-card .desktop-notice-hint{font-size:18px;margin-top:22px}
+.desktop-notice-card a{display:block;overflow-wrap:anywhere;font:14px/1.6 Arial,sans-serif;margin-top:22px;color:#80212e}
+.desktop-heart{font:44px/1 Georgia,serif;color:#a93644}
+@media(min-width:768px){
+ body{padding:0!important}
+ .desktop-notice{position:fixed;inset:0;z-index:2000;display:grid;place-items:center;padding:24px;background:#eee3d3;overflow:auto}
+ .invitation-shell,.letter-intro{display:none!important}
+ html.letter-loading{overflow:auto}
+}
+@media(max-width:767px){body{padding:0}.invitation-shell{max-width:none}}
+@media(prefers-reduced-motion:reduce){.invitation-opened{animation:none}.letter-intro.is-extracting .letter-paper{transition:none;transform:none}}
+
+/* Keep decorations in their own space, clear of all text. */
+.intro{min-height:0;padding-bottom:23cqw}
+.intro .copy{line-height:1.28}
+.intro .decoration{position:relative;inset:auto;display:inline-block;vertical-align:middle;margin:8cqw 5cqw 0}
+.intro .glasses{width:13.5cqw;height:18.7cqw}
+.intro .rings{width:15cqw;height:12cqw}
+.story-copy,.dinner>.copy{line-height:1.28}
+.date-card{padding-right:15cqw;padding-left:2cqw}
+.date-card time{font-size:7cqw}
+.date-card .cake{right:1cqw;bottom:3cqw;width:14cqw;height:15cqw}
+.dress-code{display:grid;grid-template-columns:46% minmax(0,1fr);align-items:center;gap:3cqw;padding-inline:6cqw;height:auto;min-height:77cqw}
+.dress-code>img{position:static;width:100%;height:auto;max-height:77cqw;object-fit:contain}
+.dress-copy{width:auto;margin:0;text-align:right;min-width:0}
+.dress-copy h2{width:auto;margin:0;font-size:9cqw;white-space:normal;line-height:1.3}
+.dress-copy p{font-size:5.4cqw;line-height:1.3;margin-top:5cqw}
+.closing-card h2{white-space:normal;line-height:1.35}
+.closing-card .copy{line-height:1.28}
+.signature{white-space:normal;line-height:1.35}
+.reading-progress{position:fixed;left:0;right:0;top:0;height:3px;z-index:900;background:#a93644;transform-origin:left;scale:0 1;pointer-events:none}
+.letter-loading .reading-progress{display:none}
+@media(min-width:768px){.reading-progress{display:none}}
+@media(prefers-reduced-motion:no-preference){
+ .reveal{opacity:0;transform:translateY(30px);filter:blur(2px);transition:opacity .95s ease,transform 1.15s cubic-bezier(.16,1,.3,1),filter .85s ease;transition-delay:var(--reveal-delay,0ms)}
+ .reveal-art{transform:translateY(32px) scale(.94);filter:blur(2px);transition-duration:1.2s,1.4s,1s}
+ .reveal.is-visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+ .closing-card.reveal{transform:translateY(35px) scale(.97)}
+ .closing-card.reveal.is-visible{transform:translateY(0) scale(1)}
+}
+@media(prefers-reduced-motion:reduce){.reading-progress{display:none}.reveal{filter:none!important;transform:none!important;opacity:1!important}}

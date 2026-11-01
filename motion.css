@@ -1,0 +1,15 @@
+.venue-map{height:260px;margin-top:36px;overflow:hidden;border:1px solid var(--line);background:var(--map)}
+.venue-map iframe{display:block;width:100%;height:100%;border:0}
+@media(prefers-reduced-motion:no-preference){
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .85s ease,transform .85s cubic-bezier(.2,.65,.3,1)}
+  .reveal.is-visible{opacity:1;transform:translateY(0)}
+  .motion-active .decoration{animation:wedding-sway 6s ease-in-out infinite;transform-origin:50% 75%}
+  .motion-active .rings{animation-delay:-2s;animation-duration:7s}
+  .motion-active .cake{animation-delay:-3s}
+  .motion-active .couple,.motion-active .dinner-illustration,.motion-active .dress-code>img{animation:wedding-float 7s ease-in-out infinite}
+  .motion-active .dinner-illustration{animation-delay:-3s}
+  .motion-active .dress-code>img{animation-delay:-5s}
+}
+@keyframes wedding-sway{0%,100%{rotate:-3deg;translate:0 0}50%{rotate:3deg;translate:0 -4px}}
+@keyframes wedding-float{0%,100%{translate:0 0}50%{translate:0 -4px}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none!important}.motion-active img{animation:none!important}}

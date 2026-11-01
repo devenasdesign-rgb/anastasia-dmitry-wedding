@@ -1,0 +1,41 @@
+@font-face{font-family:Cormorant Garamond;src:url('fonts/CormorantGaramond-Italic.ttf') format('truetype');font-weight:300 700;font-style:italic;font-display:swap}
+@font-face{font-family:Great Vibes;src:url('fonts/GreatVibes-Regular.ttf') format('truetype');font-display:swap}
+@font-face{font-family:Cormorant Garamond;src:url('fonts/CormorantGaramond.ttf') format('truetype');font-weight:300 700;font-display:swap}
+@font-face{font-family:Laguna;src:url('fonts/lagunac.otf') format('opentype');font-display:swap}
+@font-face{font-family:Laguna;src:url('fonts/lagunac_bold.otf') format('opentype');font-weight:700;font-display:swap}
+:root{--paper:#f9f3e8;--red:#80212e;--map:#f0e5d6;--line:#b27d7a}
+*{box-sizing:border-box}html{background:#e9dfd0;scroll-behavior:smooth}body{margin:0;color:var(--red);font-family:'Cormorant Garamond',Georgia,serif;font-size:21px;line-height:1.1}img{display:block;max-width:100%;height:auto}h1,h2,h3,p,figure{margin:0}h2{font-family:'Great Vibes',cursive;font-weight:400;font-size:42px;line-height:1.252}p+p{margin-top:23px}.invitation{width:min(100%,390px);margin:auto;background:var(--paper);overflow:hidden;text-align:center;box-shadow:0 0 60px #4d293015}.inset{margin-inline:30px}.copy{font-size:21px;line-height:1.1}.decoration{position:absolute;pointer-events:none}.hero{height:650px;position:relative;padding-top:45px}.names{position:relative;height:142px;font-family:'Great Vibes',cursive;font-size:72.88px;font-weight:400;line-height:1.252}.anastasia{position:absolute;width:259px;left:20px;top:0}.dmitry{position:absolute;width:257px;right:30px;top:51px;-webkit-text-stroke:4px var(--paper);paint-order:stroke fill}.ampersand{position:absolute;left:70px;top:73px;font:40.8px/1.12 Laguna,serif}.couple{position:absolute;top:164px;left:38px;width:314px;height:422px;object-fit:contain}.wedding-date{position:absolute;top:580px;left:0;right:0;font:700 32.73px/1.14 Laguna,serif}.intro{position:relative;padding-top:44px;min-height:382px}.intro .copy{margin-top:23px}.glasses{width:68px;height:94px;right:-15px;top:97px}.rings{width:67px;height:53px;left:-21px;bottom:25px}.story h2{margin-bottom:17px}.messages{width:200px;height:110px;margin:0 auto 30px;object-fit:contain}.story-copy{min-height:230px}.memory{position:relative;margin-top:30px;height:490px;width:367.5px;margin-left:21px}.memory-photo{position:absolute;left:75px;top:103px;width:217.43px;height:284.27px;border-radius:13.4px;object-fit:cover}.lace{position:absolute;inset:0;width:367.5px;height:490px;object-fit:fill}.dinner{padding-top:61px}.dinner h2{font-size:37px;line-height:1.252}.dinner>.copy{margin-top:15px}.dinner-illustration{width:390px;height:472px;object-fit:contain;margin-top:20px}.location{padding-top:48px}.date-card{position:relative;background:var(--red);color:var(--paper);height:96px;margin-top:22px;display:grid;place-items:center}.date-card time{font:31px/1.2 Laguna,serif}.date-card time span{font-family:'Cormorant Garamond',Georgia,serif}.cake{width:81px;height:88px;object-fit:contain;right:-9px;bottom:-37px}.location h3{font-size:27px;font-style:italic;font-weight:600;line-height:1.21;margin-top:22px}.location address{font-size:23px;line-height:1.05;font-style:normal;margin-top:1px}.map-placeholder{height:220px;background:var(--map);border:1px solid var(--line);margin-top:25px;display:flex;align-items:center;justify-content:center;font:18px/1.21 Arial,sans-serif;flex-direction:column}.map-link{display:grid;place-items:center;height:50px;margin-top:12px;background:var(--red);color:var(--paper);font-size:23px;text-decoration:none;transition:background .2s}.map-link:hover{background:#a03545}.map-link:focus-visible{outline:2px solid var(--red);outline-offset:5px}.dress-code{position:relative;height:311px;margin-top:72px}.dress-code>img{position:absolute;width:200px;height:300px;object-fit:contain;left:15px;top:0}.dress-copy{position:relative;margin-left:auto;margin-right:30px;width:145px;text-align:right}.dress-copy h2{width:230px;margin-left:-85px;white-space:nowrap}.dress-copy p{font-size:23px;line-height:1.05;margin-top:22px}.closing{position:relative;min-height:665px;padding:59px 30px 116px;isolation:isolate}.closing-pattern{position:absolute;max-width:none;width:1010px;height:665px;left:50%;top:0;transform:translateX(-50%);object-fit:contain;z-index:-1}.closing-card{background:var(--red);color:var(--paper);min-height:490px;padding:64px 14px 60px}.closing-card h2{font-size:42px;white-space:nowrap;margin-inline:-14px}.closing-card .copy{font-size:23px;line-height:1.05;margin-top:23px}.closing-card .copy p+p{margin-top:24px}.signature{font:37px/1.252 'Great Vibes',cursive;margin-top:44px;white-space:nowrap;margin-inline:-14px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(min-width:600px){body{padding-block:32px}.invitation{border-radius:3px}}
+@media(max-width:389px){.inset{margin-inline:24px}.anastasia{left:10px}.dmitry{right:12px}.names{font-size:65px}.ampersand{left:50px}.couple{left:50%;transform:translateX(-50%);width:calc(100% - 60px)}.copy{font-size:19px}.intro{min-height:382px}.story-copy{min-height:230px}.memory{width:calc(100% - 30px);margin-inline:15px;height:auto;aspect-ratio:3/4}.memory-photo{left:20.4%;top:21%;width:59.2%;height:58%}.lace{width:100%;height:100%}.dinner-illustration{width:100%;height:auto;aspect-ratio:390/472}.dress-copy{margin-right:24px;width:130px}.dress-code>img{left:0;width:180px}.dress-copy h2{font-size:38px}.closing{padding-inline:24px}.closing-card h2{font-size:36px}.closing-card .copy{font-size:21px}.signature{font-size:32px}.glasses{right:-18px}.location h3{font-size:25px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.map-link{transition:none}}
+.hero.has-countdown{height:770px}.countdown{position:absolute;top:644px;left:30px;right:30px;color:var(--red)}.countdown[hidden]{display:none}.countdown-title{font:21px/1.2 'Cormorant Garamond',Georgia,serif;margin-bottom:17px}.countdown-digits{display:flex;align-items:flex-start;justify-content:center;gap:9px}.countdown-digits>div{min-width:48px;display:flex;flex-direction:column;gap:5px}.countdown-digits span{font:32px/1 Laguna,Georgia,serif;font-variant-numeric:tabular-nums}.countdown-digits small{font:15px/1.2 'Cormorant Garamond',Georgia,serif}.countdown-digits b{font:23px/1.25 'Cormorant Garamond',Georgia,serif;font-weight:400;opacity:.55}@media(max-width:350px){.countdown{left:24px;right:24px}.countdown-digits{gap:6px}.countdown-digits>div{min-width:43px}.countdown-digits span{font-size:29px}}
+.memory-photo{transition:opacity .35s ease;opacity:1}.memory-photo-next{opacity:0}.lace{pointer-events:none}@media(prefers-reduced-motion:reduce){.memory-photo{transition:none}}
+
+/* Comfortable vertical rhythm between sections. */
+.hero.has-countdown{height:800px}
+.intro{padding-top:72px;min-height:450px}
+.intro .copy{margin-top:32px}
+.story h2{margin-bottom:32px}
+.messages{margin-bottom:44px}
+.story-copy{min-height:260px;line-height:1.2}
+.memory{margin-top:56px}
+.dinner{padding-top:96px}
+.dinner>.copy{margin-top:32px;line-height:1.2}
+.dinner-illustration{margin-top:40px}
+.location{padding-top:80px}
+.date-card{margin-top:32px}
+.location h3{margin-top:42px}
+.location address{margin-top:12px;line-height:1.15}
+.map-link{margin-top:18px}
+.dress-code{margin-top:112px;height:340px}
+.dress-copy p{margin-top:32px;line-height:1.15}
+.closing{margin-top:64px;min-height:720px;padding-top:72px;padding-bottom:120px}
+.closing-pattern{height:100%;object-fit:cover}
+.closing-card{min-height:530px;padding-top:76px;padding-bottom:76px}
+.closing-card .copy{margin-top:32px;line-height:1.15}
+.closing-card .copy p+p{margin-top:32px}
+.signature{margin-top:52px}
+
+/* Small repeating motifs keep the final backdrop crisp. */
+.closing{background-image:url("assets/pattern-tile.png");background-repeat:repeat;background-size:340px auto;background-position:center top}
+.closing-pattern{display:none}
