@@ -16,7 +16,7 @@
     if (started || document.documentElement.classList.contains('letter-loading')) return;
     started = true;
     if (motion.matches || !('IntersectionObserver' in window)) return;
-    const selectors = '.names, .couple, .wedding-date, .countdown, .intro h2, .intro .copy, .story h2, .messages, .story-copy, .memory, .dinner h2, .dinner > .copy, .dinner-illustration, .location h2, .wedding-calendar, .location h3, .location address, .venue-map, .map-link, .dress-code > img, .dress-copy, .closing-card';
+    const selectors = '.countdown, .scene-no, .intro h2, .intro .copy, .story h2, .messages-scene, .story-copy, .memory, .dinner h2, .dinner > .copy, .dinner-illustration, .location h2, .wedding-calendar, .location h3, .location address, .venue-map, .map-link, .dress-code > img, .dress-copy, .closing-card';
     observer = new IntersectionObserver(entries => {
       let order = 0;
       for (const entry of entries) {

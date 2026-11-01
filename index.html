@@ -19,8 +19,8 @@
   <script src="motion.js" defer></script>
   <script src="countdown.js" defer></script>
   <link rel="stylesheet" href="responsive.css">
-  <link rel="stylesheet" href="film.css">
-  <script src="film.js" defer></script>
+  <link rel="stylesheet" href="film.css?v=2">
+  <script src="film.js?v=2" defer></script>
 </head>
 <body>
 <aside class="desktop-notice" aria-label="Откройте приглашение на телефоне">
@@ -42,10 +42,22 @@
 <div class="invitation-shell"><main class="invitation">
   <header class="hero">
     <h1 class="names"><span class="anastasia">Анастасия</span><span class="ampersand">&</span><span class="dmitry">Дмитрий</span></h1>
-    <div class="couple film-scene couple-scene" role="img" aria-label="Рисованная пара нежно сближается за табличками с датой">
+    <div class="couple film-scene couple-scene" role="img" aria-label="Рисованная пара целуется, спрятавшись за табличками с датой 11">
       <img class="scene-fallback" src="assets/couple.png" width="628" height="844" alt="">
-      <div class="couple-ground" aria-hidden="true"></div><div class="couple-bride" aria-hidden="true"></div><div class="couple-groom" aria-hidden="true"></div>
-      <span class="scene-heart heart-one" aria-hidden="true">♡</span><span class="scene-heart heart-two" aria-hidden="true">♥</span>
+      <svg class="film-drawing couple-drawing" viewBox="0 0 628 844" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><radialGradient id="blush"><stop offset="0" stop-color="#e9a2a2" stop-opacity=".6"/><stop offset="1" stop-color="#e9a2a2" stop-opacity="0"/></radialGradient></defs>
+        <ellipse class="kiss-blush" cx="360" cy="205" rx="120" ry="95" fill="url(#blush)"/>
+        <image href="assets/film/couple-ground.webp" x="23" y="401" width="574" height="327"/>
+        <g class="kiss-bride"><image href="assets/film/couple-bride.webp" x="165" y="135" width="196" height="325"/></g>
+        <g class="kiss-groom"><image href="assets/film/couple-groom.webp" x="344" y="104" width="218" height="356"/></g>
+        <g class="kiss-spark"><path d="M330 120l-12-12m10 26l-16-3m54-11 12-12m-10 26 16-3"/></g>
+        <g fill="#a93644">
+          <path class="kiss-heart" d="M358 128c-9-8-15-14-9-20 4-4 8-2 9 1 1-3 5-5 9-1 6 6 0 12-9 20z"/>
+          <path class="kiss-heart" d="M342 132c-6-5-10-9-6-13 3-3 5-1 6 1 1-2 3-4 6-1 4 4 0 8-6 13z"/>
+          <path class="kiss-heart" d="M376 134c-6-5-10-9-6-13 3-3 5-1 6 1 1-2 3-4 6-1 4 4 0 8-6 13z"/>
+          <path class="kiss-heart" d="M360 140c-7-6-11-10-7-15 3-3 6-1 7 1 1-2 4-4 7-1 4 5 0 9-7 15z" fill="none" stroke="#a93644" stroke-width="2"/>
+        </g>
+      </svg>
     </div>
     <time class="wedding-date" datetime="2026-11-11">11.11.2026</time>
     <div class="countdown" hidden role="timer" aria-live="off" aria-label="До встречи за свадебным ужином">
@@ -60,6 +72,7 @@
   </header>
 
   <section class="intro inset" aria-labelledby="dear">
+    <p class="scene-no">Сцена I</p>
     <h2 id="dear">Дорогие наши!</h2>
     <div class="copy">
       <p>Мы женимся и хотим отметить этот день<br>в кругу семьи.</p>
@@ -70,8 +83,14 @@
   </section>
 
   <section class="story" aria-labelledby="our-story">
+    <p class="scene-no">Сцена II</p>
     <h2 id="our-story">Наша история</h2>
-    <img class="messages" src="assets/messages.png" width="400" height="220" alt="Два сообщения с сердечком">
+    <div class="messages-scene">
+      <img class="messages" src="assets/messages.png" width="400" height="220" alt="Два сообщения с сердечком">
+      <img class="msg-layer msg-left" src="assets/film/msg-left.webp" width="400" height="220" alt="">
+      <img class="msg-layer msg-right" src="assets/film/msg-right.webp" width="400" height="220" alt="">
+      <img class="msg-layer msg-env" src="assets/film/msg-env.webp" width="400" height="220" alt="">
+    </div>
     <div class="copy inset story-copy">
       <p>Всё началось со знакомства<br>в интернете в 2022 году.</p>
       <p>11 ноября 2022 мы впервые увиделись.<br>Ровно через четыре года,<br>11 ноября 2026, мы станем семьёй.</p>
@@ -85,33 +104,42 @@
   </section>
 
   <section class="dinner" aria-labelledby="warm-evening">
+    <p class="scene-no">Сцена III</p>
     <h2 id="warm-evening">Тёплый вечер вместе</h2>
     <p class="copy inset">Нет никаких расписаний и программ, наш простой свадебный ужин, чтобы мы просто провели время в кругу самых близких.</p>
-    <div class="dinner-illustration film-scene dinner-scene" role="img" aria-label="Ожившая иллюстрация семейного ужина: гости покачиваются, свечи мерцают, бокалы сверкают">
-      <img class="scene-fallback" src="assets/dinner.png" width="780" height="944" alt="" loading="lazy">
-      <svg class="dinner-drawing" viewBox="0 0 780 944" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs>
-          <clipPath id="toast-couple"><polygon points="248,35 540,35 540,235 410,280 240,250"/></clipPath>
-          <clipPath id="toast-left"><polygon points="50,150 240,150 240,250 245,300 230,480 275,650 200,780 50,780"/></clipPath>
-          <clipPath id="toast-right"><polygon points="545,150 740,150 740,800 550,800 500,670 550,520 525,410 530,280"/></clipPath>
-          <mask id="dinner-still"><rect width="780" height="944" fill="white"/><polygon points="248,35 540,35 540,235 410,280 240,250" fill="black"/><polygon points="50,150 240,150 240,250 245,300 230,480 275,650 200,780 50,780" fill="black"/><polygon points="545,150 740,150 740,800 550,800 500,670 550,520 525,410 530,280" fill="black"/></mask>
-        </defs>
-        <image href="assets/dinner.png" width="780" height="944" mask="url(#dinner-still)"/>
-        <g class="toast-couple" clip-path="url(#toast-couple)"><image href="assets/dinner.png" width="780" height="944"/></g>
-        <g class="toast-left" clip-path="url(#toast-left)"><image href="assets/dinner.png" width="780" height="944"/></g>
-        <g class="toast-right" clip-path="url(#toast-right)"><image href="assets/dinner.png" width="780" height="944"/></g>
-        <g class="toast-sparkles" fill="none" stroke="#a93644" stroke-width="2" stroke-linecap="round">
-          <path class="sparkle sparkle-one" d="M380 131v-12m-9 15-7-8m25 8 7-8"/>
-          <path class="sparkle sparkle-two" d="M278 205v-10m-8 14-7-7m23 7 7-7"/>
-          <path class="sparkle sparkle-three" d="M548 306v-10m-8 14-7-7m23 7 7-7"/>
-        </g>
-        <ellipse class="candle-glow candle-one" cx="391" cy="284" rx="5" ry="10" fill="#bd7754" opacity=".45"/>
-        <ellipse class="candle-glow candle-two" cx="418" cy="532" rx="4" ry="9" fill="#bd7754" opacity=".45"/>
-      </svg>
+    <div class="dinner-film">
+      <div class="dinner-stage">
+        <div class="dinner-illustration film-scene dinner-scene" role="img" aria-label="Ожившая иллюстрация семейного ужина: гости поднимают бокалы и чокаются, свечи мерцают">
+          <img class="scene-fallback" src="assets/dinner.png" width="780" height="944" alt="" loading="lazy">
+          <svg class="film-drawing dinner-drawing" viewBox="0 0 780 944" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <radialGradient id="candle"><stop offset="0" stop-color="#f3b267" stop-opacity=".75"/><stop offset=".45" stop-color="#f1c48e" stop-opacity=".3"/><stop offset="1" stop-color="#f6dcb8" stop-opacity="0"/></radialGradient>
+              <radialGradient id="toast-warm"><stop offset="0" stop-color="#f2c08c" stop-opacity=".55"/><stop offset="1" stop-color="#f2c08c" stop-opacity="0"/></radialGradient>
+            </defs>
+            <g class="dinner-camera">
+              <ellipse class="toast-glow" cx="390" cy="420" rx="380" ry="430" fill="url(#toast-warm)"/>
+              <image href="assets/film/dinner-table.webp" x="87" y="116" width="613" height="763"/>
+              <circle class="candle-light" cx="393" cy="268" r="70" fill="url(#candle)"/>
+              <circle class="candle-light two" cx="423" cy="496" r="62" fill="url(#candle)"/>
+          <g class="guest guest-couple" style="--o:390px 235px"><g class="sway" style="--s:.5deg;--d:4.2s"><image href="assets/film/guest-couple.webp" x="246" y="60" width="310" height="184"/><g class="fizz"><circle cx="374" cy="162" r="1.7"/><circle cx="379" cy="164" r="1.3"/><circle cx="377" cy="160" r="1.5"/></g><g class="fizz"><circle cx="393" cy="148" r="1.7"/><circle cx="398" cy="150" r="1.3"/><circle cx="396" cy="146" r="1.5"/></g></g><g class="clink" data-x="386"><path d="M386 116v-11m10 13 8-8m-28 8-8-8m30 18h10m-42 0h-10"/><circle cx="386" cy="124" r="3"/></g></g>
+          <g class="guest guest-aunt" style="--o:205px 300px"><g class="sway" style="--s:.9deg;--d:5.1s"><image href="assets/film/guest-aunt.webp" x="116" y="150" width="196" height="162"/><g class="fizz"><circle cx="273" cy="206" r="1.7"/><circle cx="278" cy="208" r="1.3"/><circle cx="276" cy="204" r="1.5"/></g></g><g class="clink" data-x="276"><path d="M276 178v-11m10 13 8-8m-28 8-8-8m30 18h10m-42 0h-10"/><circle cx="276" cy="186" r="3"/></g></g>
+          <g class="guest guest-grandpa" style="--o:160px 480px"><g class="sway" style="--s:.7deg;--d:5.7s"><image href="assets/film/guest-grandpa.webp" x="89" y="271" width="240" height="226"/><g class="fizz"><circle cx="267" cy="428" r="1.7"/><circle cx="272" cy="430" r="1.3"/><circle cx="270" cy="426" r="1.5"/></g></g><g class="clink" data-x="270"><path d="M270 398v-11m10 13 8-8m-28 8-8-8m30 18h10m-42 0h-10"/><circle cx="270" cy="406" r="3"/></g></g>
+          <g class="guest guest-boy" style="--o:160px 705px"><g class="sway" style="--s:.6deg;--d:4.6s"><image href="assets/film/guest-boy.webp" x="87" y="429" width="220" height="288"/><g class="fizz"><circle cx="267" cy="528" r="1.7"/><circle cx="272" cy="530" r="1.3"/><circle cx="270" cy="526" r="1.5"/></g></g><g class="clink" data-x="270"><path d="M270 498v-11m10 13 8-8m-28 8-8-8m30 18h10m-42 0h-10"/><circle cx="270" cy="506" r="3"/></g></g>
+          <g class="guest guest-grandma" style="--o:590px 320px"><g class="sway" style="--s:.8deg;--d:6.2s"><image href="assets/film/guest-grandma.webp" x="509" y="150" width="162" height="179"/></g></g>
+          <g class="guest guest-uncle" style="--o:640px 500px"><g class="sway" style="--s:.7deg;--d:5.3s"><image href="assets/film/guest-uncle.webp" x="499" y="291" width="200" height="224"/><g class="fizz"><circle cx="528" cy="392" r="1.7"/><circle cx="533" cy="394" r="1.3"/><circle cx="531" cy="390" r="1.5"/></g></g><g class="clink" data-x="530"><path d="M530 360v-11m10 13 8-8m-28 8-8-8m30 18h10m-42 0h-10"/><circle cx="530" cy="368" r="3"/></g></g>
+          <g class="guest guest-girl" style="--o:610px 700px"><g class="sway" style="--s:.6deg;--d:4.9s"><image href="assets/film/guest-girl.webp" x="499" y="452" width="200" height="264"/><g class="fizz"><circle cx="531" cy="552" r="1.7"/><circle cx="536" cy="554" r="1.3"/><circle cx="534" cy="550" r="1.5"/></g></g><g class="clink" data-x="533"><path d="M533 520v-11m10 13 8-8m-28 8-8-8m30 18h10m-42 0h-10"/><circle cx="533" cy="528" r="3"/></g></g>
+              <g fill="#a93644"><path class="party-heart" style="--dx:-60px;--r:-25deg" d="M386 150c-9-8-15-14-9-20 4-4 8-2 9 1 1-3 5-5 9-1 6 6 0 12-9 20z"/><path class="party-heart" style="--dx:40px;--r:20deg" d="M370 170c-9-8-15-14-9-20 4-4 8-2 9 1 1-3 5-5 9-1 6 6 0 12-9 20z"/><path class="party-heart" style="--dx:-20px;--r:15deg" d="M400 165c-9-8-15-14-9-20 4-4 8-2 9 1 1-3 5-5 9-1 6 6 0 12-9 20z"/><path class="party-heart" style="--dx:-90px;--r:-30deg" d="M350 190c-9-8-15-14-9-20 4-4 8-2 9 1 1-3 5-5 9-1 6 6 0 12-9 20z"/><path class="party-heart" style="--dx:80px;--r:25deg" d="M420 185c-9-8-15-14-9-20 4-4 8-2 9 1 1-3 5-5 9-1 6 6 0 12-9 20z"/><path class="party-heart" style="--dx:10px;--r:-10deg" d="M392 200c-9-8-15-14-9-20 4-4 8-2 9 1 1-3 5-5 9-1 6 6 0 12-9 20z"/><path class="party-heart" style="--dx:-40px;--r:-20deg" d="M300 260c-9-8-15-14-9-20 4-4 8-2 9 1 1-3 5-5 9-1 6 6 0 12-9 20z"/><path class="party-heart" style="--dx:50px;--r:30deg" d="M480 260c-9-8-15-14-9-20 4-4 8-2 9 1 1-3 5-5 9-1 6 6 0 12-9 20z"/></g>
+            </g>
+          </svg>
+        </div>
+        <p class="toast-caption" aria-live="polite"><span data-cap="0">За любовь!</span><span data-cap="1">За семью!</span><span data-cap="2">За счастье!</span><span data-cap="3">Горько!</span></p>
+        <div class="film-progress" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      </div>
     </div>
   </section>
 
   <section class="location inset" aria-labelledby="meeting">
+    <p class="scene-no">Сцена IV</p>
     <h2 id="meeting">Мы встречаемся</h2>
     <div class="wedding-calendar">
       <table aria-label="Ноябрь 2026, 11 ноября — день свадьбы">
@@ -135,15 +163,17 @@
 
   <section class="dress-code" aria-labelledby="dress-code">
     <img src="assets/dress.png" width="400" height="600" alt="Мужчина выбирает пиджак" loading="lazy">
-    <div class="dress-copy"><h2 id="dress-code">Дресс-код</h2><p>Как вам удобно.<br>Выбирайте то, в чём вам комфортно.</p></div>
+    <div class="dress-copy"><p class="scene-no">Сцена V</p><h2 id="dress-code">Дресс-код</h2><p>Как вам удобно.<br>Выбирайте то, в чём вам комфортно.</p></div>
   </section>
 
   <footer class="closing">
     <img class="closing-pattern" src="assets/pattern.png" width="2020" height="1330" alt="" loading="lazy">
     <div class="closing-card">
+      <p class="scene-no">Финал</p>
       <h2>Просто быть рядом</h2>
       <div class="copy"><p>Небольшой семейный ужин,<br>тёплые разговоры и любимые люди.</p><p>Для нас главное — провести<br>этот вечер с вами.</p></div>
       <p class="signature">С любовью,<br>Анастасия и Дмитрий</p>
+      <p class="to-be-continued">Продолжение следует…</p>
     </div>
   </footer>
 </main></div>
