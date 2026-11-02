@@ -144,3 +144,6 @@
 .motion-active .dr-held{animation:hanger-swing 3.4s ease-in-out infinite alternate}
 .motion-active .dr-rack{animation:hanger-swing 4.2s -1.3s ease-in-out infinite alternate;--swing:2deg}
 @keyframes hanger-swing{from{rotate:calc(var(--swing,3deg)*-1)}to{rotate:var(--swing,3deg)}}
+
+/* Centre the photo frame in the column */
+.memory{margin-inline:auto!important}
