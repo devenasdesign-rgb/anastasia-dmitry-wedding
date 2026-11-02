@@ -111,17 +111,11 @@
   const playHero = () => heroLoop.forEach(a => (heroStarted && heroVisible ? a.play() : a.pause()));
   new IntersectionObserver(([entry]) => { heroVisible = entry.isIntersecting; playHero(); }).observe(hero);
 
+  // The envelope scatters its pattern, then the hero writes itself in.
   function openingTitles() {
-    const bars = document.createElement('div');
-    bars.className = 'cinema-bars';
-    bars.setAttribute('aria-hidden', 'true');
-    bars.innerHTML = '<div class="bar-top"><span>Анастасия и Дмитрий представляют</span></div><div class="bar-bottom"><span>фильм-приглашение · 11.11.2026</span></div>';
-    document.body.append(bars);
-    requestAnimationFrame(() => requestAnimationFrame(() => bars.classList.add('in')));
-    setTimeout(() => { root.classList.add('hero-play'); root.classList.remove('film-prelude'); }, 900);
-    setTimeout(() => { bars.classList.remove('in'); bars.classList.add('out'); }, 2700);
-    setTimeout(() => { bars.remove(); toggle.classList.add('shown'); }, 3600);
-    setTimeout(() => { heroStarted = true; playHero(); }, 3300);
+    setTimeout(() => { root.classList.add('hero-play'); root.classList.remove('film-prelude'); }, 250);
+    setTimeout(() => toggle.classList.add('shown'), 1800);
+    setTimeout(() => { heroStarted = true; playHero(); }, 2700);
   }
   if (root.classList.contains('letter-loading')) {
     const wait = new MutationObserver(() => {

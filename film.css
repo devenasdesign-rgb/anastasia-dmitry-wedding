@@ -73,13 +73,6 @@
 .film-progress i::after{content:"";position:absolute;inset:0;background:var(--red);transform-origin:left;scale:var(--p,0) 1}
 
 /* Cinematic opening: letterbox bars with credits, names written by hand */
-.cinema-bars{position:fixed;inset:0;z-index:900;pointer-events:none}
-.cinema-bars div{position:absolute;left:0;right:0;height:max(15svh,90px);background:#6f1c28;color:#f6e7d7;display:grid;place-items:center;font:italic 19px/1.2 'Cormorant Garamond',Georgia,serif;letter-spacing:.08em;transition:transform .9s cubic-bezier(.7,0,.2,1)}
-.cinema-bars .bar-top{top:0;padding-top:env(safe-area-inset-top);transform:translateY(-100%)}
-.cinema-bars .bar-bottom{bottom:0;padding-bottom:env(safe-area-inset-bottom);transform:translateY(100%)}
-.cinema-bars span{opacity:0;transition:opacity .6s .5s}
-.cinema-bars.in div{transform:none}.cinema-bars.in span{opacity:1}
-.cinema-bars.out div{transition-duration:.8s}
 .film-prelude .names>span,.film-prelude .couple,.film-prelude .wedding-date{opacity:0}
 .hero-play .anastasia{animation:hand-write 1.5s cubic-bezier(.5,0,.3,1) both}
 .hero-play .ampersand{animation:amp-pop .7s 1.1s cubic-bezier(.3,1.6,.5,1) both}
@@ -104,10 +97,21 @@
 
 @media(prefers-reduced-motion:reduce){
   .film-scene>.scene-fallback{visibility:visible!important}.film-drawing{display:none!important}
-  .film-grain,.cinema-bars{display:none}
+  .film-grain{display:none}
   .film-on .dinner-film{height:auto}.film-on .dinner-stage{position:relative;height:auto}
 }
 .couple-scene{transform:none}
 .film-prelude .countdown{visibility:hidden}
 .hero-play .countdown{animation:fade-up 1s 2.9s ease both}
 @keyframes fade-up{from{opacity:0;translate:0 14px}to{opacity:1;translate:0 0}}
+
+/* Closing pattern built from separate vector motifs */
+.closing-motifs{position:absolute;inset:0;width:100%;height:100%;z-index:-1;overflow:hidden}
+.motifs-ready .closing-pattern{display:none}
+.closing-motifs .cm{transform-box:fill-box;transform-origin:center;opacity:0;scale:.2;rotate:calc(var(--r) - 40deg);cursor:pointer}
+.motifs-bloom .closing-motifs .cm{opacity:1;scale:1;rotate:var(--r);transition:opacity .5s var(--in) ease,scale .9s var(--in) cubic-bezier(.3,1.6,.5,1),rotate .9s var(--in) cubic-bezier(.3,1.4,.5,1);animation:motif-sway var(--d) var(--delay) ease-in-out infinite alternate}
+.motifs-still .closing-motifs .cm{transition:none;animation:none}
+.closing-motifs .cm.boing{animation:motif-boing .7s cubic-bezier(.3,1.6,.5,1)}
+@keyframes motif-sway{from{translate:0 0}to{translate:0 -5px}}
+@keyframes motif-boing{0%{translate:0 0}35%{translate:0 -14px}100%{translate:0 0}}
+.closing-card{position:relative;z-index:1}

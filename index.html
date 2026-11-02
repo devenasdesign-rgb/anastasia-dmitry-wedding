@@ -12,32 +12,28 @@
   <link rel="preload" href="fonts/GreatVibes-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="fonts/CormorantGaramond.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="envelope.css">
-  <script src="envelope.js" defer></script>
+  <link rel="stylesheet" href="envelope.css?v=3">
+  <script src="envelope.js?v=3" defer></script>
   <script src="slideshow.js" defer></script>
   <link rel="stylesheet" href="motion.css">
   <script src="motion.js" defer></script>
   <script src="countdown.js" defer></script>
   <link rel="stylesheet" href="responsive.css">
-  <link rel="stylesheet" href="film.css?v=2">
-  <script src="film.js?v=2" defer></script>
+  <link rel="stylesheet" href="film.css?v=3">
+  <script src="film.js?v=3" defer></script>
+  <script src="pattern.js?v=1" defer></script>
 </head>
 <body>
 <aside class="desktop-notice" aria-label="Откройте приглашение на телефоне">
   <div class="desktop-notice-card"><span class="desktop-heart" aria-hidden="true">♥</span><h2>Вам приглашение</h2><p>Это приглашение необходимо открыть<br>на вашем мобильном устройстве.</p><p class="desktop-notice-hint">Отправьте ссылку себе и откройте её на телефоне.</p><a href="https://devenasdesign-rgb.github.io/anastasia-dmitry-wedding/">devenasdesign-rgb.github.io/anastasia-dmitry-wedding/</a></div>
 </aside>
 <div class="letter-intro" id="letter-intro" aria-label="Открытие свадебного приглашения">
-  <div class="letter-scene">
-    <p class="letter-for-you">Вам письмо</p>
-    <div class="envelope">
-      <div class="envelope-back"></div>
-      <div class="letter-paper"><span>Анастасия<br>и Дмитрий</span><small>11.11.2026</small></div>
-      <div class="envelope-pocket"></div>
-      <div class="envelope-flap"></div>
-      <button class="wax-seal" type="button" aria-label="Открыть приглашение"><span aria-hidden="true">♥</span></button>
-    </div>
-    <p class="letter-hint">Нажмите на сердечко, чтобы открыть</p>
+  <svg class="intro-pattern" aria-hidden="true"></svg>
+  <div class="env-pocket" aria-hidden="true"><svg class="env-shape"></svg><p class="env-address"><span>Анастасия &amp; Дмитрий</span><small>11 · 11 · 2026</small></p></div>
+  <div class="env-flap"><svg class="env-shape" aria-hidden="true"></svg>
+    <button class="wax-seal" type="button" aria-label="Открыть приглашение"><span aria-hidden="true">А<i>&amp;</i>Д</span></button>
   </div>
+  <p class="letter-hint">Нажмите на печать, чтобы открыть</p>
 </div>
 <div class="invitation-shell"><main class="invitation">
   <header class="hero">
