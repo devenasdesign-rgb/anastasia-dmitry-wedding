@@ -168,13 +168,22 @@
     { transform: `rotate(${deg}deg) ${extra}`, offset: .94 },
     { transform: `rotate(${deg}deg) ${extra}`, offset: 1 }
   ];
+  // Bodies only lean a little; the arms do the toast, swinging the glass towards the table centre.
   const guests = {
-    couple: [0, .28, .42, 'translateY(-8px)'],
-    aunt: [3.4, .5, .64], grandpa: [3, .52, .64], boy: [2.6, .54, .66],
-    grandma: [-2.2, .72, .84], uncle: [-2.6, .74, .85], girl: [-2.4, .76, .86]
+    couple: [0, .28, .42, 'translateY(-4px)'],
+    aunt: [1.2, .5, .64], grandpa: [1, .52, .64], boy: [.9, .54, .66],
+    grandma: [-1, .72, .84], uncle: [-.9, .74, .85], girl: [-.8, .76, .86]
   };
   for (const [name, [deg, inAt, outAt, extra]] of Object.entries(guests)) {
     scrub(dinner.querySelector(`.guest-${name}`), leanKeys(deg, inAt, outAt, extra));
+  }
+  const arms = {
+    bride: [6, .28, .42], groom: [-6, .28, .42],
+    aunt: [11, .5, .64], grandpa: [10, .52, .64], boy: [10, .54, .66],
+    uncle: [-10, .74, .85], girl: [-10, .76, .86]
+  };
+  for (const [name, [deg, inAt, outAt]] of Object.entries(arms)) {
+    scrub(dinner.querySelector(`.arm-${name}`), leanKeys(deg, inAt, outAt, 'translateY(-3px)'));
   }
   scrub(dinner.querySelector('.toast-glow'), [
     { opacity: 0, offset: 0 }, { opacity: 0, offset: .84 }, { opacity: 1, offset: .95 }, { opacity: 1, offset: 1 }

@@ -147,3 +147,6 @@
 
 /* Centre the photo frame in the column */
 .memory{margin-inline:auto!important}
+
+/* Toasting arms swing on the elbow */
+.arm{transform-box:view-box;transform-origin:var(--o)}
