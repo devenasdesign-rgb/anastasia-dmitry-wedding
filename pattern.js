@@ -17,14 +17,25 @@
     svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
     svg.replaceChildren();
     items = [];
+    // Place motifs on a jittered grid, skipping any spot that would overlap a neighbour.
     const cell = w / 5.2, cols = Math.ceil(w / cell) + 1, rows = Math.ceil(h / cell) + 1;
+    const placed = [], gap = cell * .06;
+    const free = (x, y, mw, mh) => placed.every(p => x + mw + gap < p.x || p.x + p.w + gap < x || y + mh + gap < p.y || p.y + p.h + gap < y);
+    const small = list.filter(m => m.w < 100 && m.h < 140);
     for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
-      const m = list[(r * 5 + c * 13 + r * c) % list.length];
-      const big = m.w > 200 || m.h > 200, tiny = m.w < 60;
-      const size = cell * (big ? .95 : tiny ? .34 : .62);
-      const scale = size / Math.max(m.w, m.h), mw = m.w * scale, mh = m.h * scale;
-      const x = c * cell + (r % 2) * cell / 2 - cell / 2 + ((c * 31 + r * 17) % 13) - 6 - mw / 2 + cell / 2;
-      const y = r * cell - cell / 2 + ((c * 19 + r * 29) % 11) - 5 - mh / 2 + cell / 2;
+      let m = list[(r * 5 + c * 13 + r * c) % list.length], x, y, mw, mh, fits = false;
+      for (let attempt = 0; attempt < 3 && !fits; attempt++) {
+        if (attempt) m = small[(r * 7 + c * 3 + attempt * 11) % small.length];
+        const big = m.w > 200 || m.h > 200, tiny = m.w < 60;
+        const size = cell * (big ? .85 : tiny ? .3 : .55) * (attempt === 2 ? .7 : 1);
+        const scale = size / Math.max(m.w, m.h);
+        mw = m.w * scale; mh = m.h * scale;
+        x = c * cell + (r % 2) * cell / 2 - mw / 2 + ((c * 31 + r * 17) % 13) - 6;
+        y = r * cell - mh / 2 + ((c * 19 + r * 29) % 11) - 5;
+        fits = free(x, y, mw, mh);
+      }
+      if (!fits) continue;
+      placed.push({ x, y, w: mw, h: mh });
       const g = document.createElementNS(NS, 'g');
       g.classList.add('cm');
       g.style.setProperty('--r', `${((r * 7 + c * 11) % 29) - 14}deg`);
