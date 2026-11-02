@@ -8,13 +8,18 @@
   if (!hero || !dinner || !film) return;
   root.classList.add('film-on', 'film-prelude');
 
-  // Layers show only once their artwork is decoded, otherwise the flat drawing stays.
-  for (const scene of [hero, dinner]) {
-    const images = [...scene.querySelectorAll('image')].map(image => image.getAttribute('href'));
-    Promise.all(images.map(src => new Promise(resolve => {
-      const img = new Image(); img.onload = img.onerror = resolve; img.src = src;
-    }))).then(() => scene.classList.add('scene-ready'));
-  }
+  // Characters are vector groups in one sprite; until it arrives the flat drawing stays.
+  fetch('assets/film/characters.svg')
+    .then(response => response.ok ? response.text() : Promise.reject())
+    .then(text => {
+      const holder = document.createElement('div');
+      holder.hidden = true;
+      holder.innerHTML = text;
+      document.body.prepend(holder);
+      hero.classList.add('scene-ready');
+      dinner.classList.add('scene-ready');
+    })
+    .catch(() => {});
 
   /* ---------- Sound: a soft synthesized glass "ding" ---------- */
   let audio, master, soundOn = true;

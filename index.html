@@ -20,7 +20,7 @@
   <script src="countdown.js" defer></script>
   <link rel="stylesheet" href="responsive.css">
   <link rel="stylesheet" href="film.css?v=3">
-  <script src="film.js?v=3" defer></script>
+  <script src="film.js?v=4" defer></script>
   <script src="pattern.js?v=1" defer></script>
 </head>
 <body>
@@ -43,9 +43,9 @@
       <svg class="film-drawing couple-drawing" viewBox="0 0 628 844" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <defs><radialGradient id="blush"><stop offset="0" stop-color="#e9a2a2" stop-opacity=".6"/><stop offset="1" stop-color="#e9a2a2" stop-opacity="0"/></radialGradient></defs>
         <ellipse class="kiss-blush" cx="360" cy="205" rx="120" ry="95" fill="url(#blush)"/>
-        <image href="assets/film/couple-ground.webp" x="23" y="401" width="574" height="327"/>
-        <g class="kiss-bride"><image href="assets/film/couple-bride.webp" x="165" y="135" width="196" height="325"/></g>
-        <g class="kiss-groom"><image href="assets/film/couple-groom.webp" x="344" y="104" width="218" height="356"/></g>
+        <use href="#cp-ground"/>
+        <g class="kiss-bride"><use href="#cp-bride"/></g>
+        <g class="kiss-groom"><use href="#cp-groom"/></g>
         <g class="kiss-spark"><path d="M330 120l-12-12m10 26l-16-3m54-11 12-12m-10 26 16-3"/></g>
         <g fill="#a93644">
           <path class="kiss-heart" d="M358 128c-9-8-15-14-9-20 4-4 8-2 9 1 1-3 5-5 9-1 6 6 0 12-9 20z"/>
@@ -114,16 +114,16 @@
             </defs>
             <g class="dinner-camera">
               <ellipse class="toast-glow" cx="390" cy="420" rx="380" ry="430" fill="url(#toast-warm)"/>
-              <image href="assets/film/dinner-table.webp" x="87" y="116" width="613" height="763"/>
+              <use href="#dn-table"/>
               <circle class="candle-light" cx="393" cy="268" r="70" fill="url(#candle)"/>
               <circle class="candle-light two" cx="423" cy="496" r="62" fill="url(#candle)"/>
-          <g class="guest guest-couple" style="--o:390px 235px"><g class="sway" style="--s:.5deg;--d:4.2s"><image href="assets/film/guest-couple.webp" x="246" y="60" width="310" height="184"/><g class="fizz"><circle cx="374" cy="162" r="1.7"/><circle cx="379" cy="164" r="1.3"/><circle cx="377" cy="160" r="1.5"/></g><g class="fizz"><circle cx="393" cy="148" r="1.7"/><circle cx="398" cy="150" r="1.3"/><circle cx="396" cy="146" r="1.5"/></g></g><g class="clink" data-x="386"><path d="M386 116v-11m10 13 8-8m-28 8-8-8m30 18h10m-42 0h-10"/><circle cx="386" cy="124" r="3"/></g></g>
-          <g class="guest guest-aunt" style="--o:205px 300px"><g class="sway" style="--s:.9deg;--d:5.1s"><image href="assets/film/guest-aunt.webp" x="116" y="150" width="196" height="162"/><g class="fizz"><circle cx="273" cy="206" r="1.7"/><circle cx="278" cy="208" r="1.3"/><circle cx="276" cy="204" r="1.5"/></g></g><g class="clink" data-x="276"><path d="M276 178v-11m10 13 8-8m-28 8-8-8m30 18h10m-42 0h-10"/><circle cx="276" cy="186" r="3"/></g></g>
-          <g class="guest guest-grandpa" style="--o:160px 480px"><g class="sway" style="--s:.7deg;--d:5.7s"><image href="assets/film/guest-grandpa.webp" x="89" y="271" width="240" height="226"/><g class="fizz"><circle cx="267" cy="428" r="1.7"/><circle cx="272" cy="430" r="1.3"/><circle cx="270" cy="426" r="1.5"/></g></g><g class="clink" data-x="270"><path d="M270 398v-11m10 13 8-8m-28 8-8-8m30 18h10m-42 0h-10"/><circle cx="270" cy="406" r="3"/></g></g>
-          <g class="guest guest-boy" style="--o:160px 705px"><g class="sway" style="--s:.6deg;--d:4.6s"><image href="assets/film/guest-boy.webp" x="87" y="429" width="220" height="288"/><g class="fizz"><circle cx="267" cy="528" r="1.7"/><circle cx="272" cy="530" r="1.3"/><circle cx="270" cy="526" r="1.5"/></g></g><g class="clink" data-x="270"><path d="M270 498v-11m10 13 8-8m-28 8-8-8m30 18h10m-42 0h-10"/><circle cx="270" cy="506" r="3"/></g></g>
-          <g class="guest guest-grandma" style="--o:590px 320px"><g class="sway" style="--s:.8deg;--d:6.2s"><image href="assets/film/guest-grandma.webp" x="509" y="150" width="162" height="179"/></g></g>
-          <g class="guest guest-uncle" style="--o:640px 500px"><g class="sway" style="--s:.7deg;--d:5.3s"><image href="assets/film/guest-uncle.webp" x="499" y="291" width="200" height="224"/><g class="fizz"><circle cx="528" cy="392" r="1.7"/><circle cx="533" cy="394" r="1.3"/><circle cx="531" cy="390" r="1.5"/></g></g><g class="clink" data-x="530"><path d="M530 360v-11m10 13 8-8m-28 8-8-8m30 18h10m-42 0h-10"/><circle cx="530" cy="368" r="3"/></g></g>
-          <g class="guest guest-girl" style="--o:610px 700px"><g class="sway" style="--s:.6deg;--d:4.9s"><image href="assets/film/guest-girl.webp" x="499" y="452" width="200" height="264"/><g class="fizz"><circle cx="531" cy="552" r="1.7"/><circle cx="536" cy="554" r="1.3"/><circle cx="534" cy="550" r="1.5"/></g></g><g class="clink" data-x="533"><path d="M533 520v-11m10 13 8-8m-28 8-8-8m30 18h10m-42 0h-10"/><circle cx="533" cy="528" r="3"/></g></g>
+          <g class="guest guest-couple" style="--o:390px 235px"><g class="sway" style="--s:.5deg;--d:4.2s"><use href="#dn-couple"/><g class="fizz"><circle cx="374" cy="162" r="1.7"/><circle cx="379" cy="164" r="1.3"/><circle cx="377" cy="160" r="1.5"/></g><g class="fizz"><circle cx="393" cy="148" r="1.7"/><circle cx="398" cy="150" r="1.3"/><circle cx="396" cy="146" r="1.5"/></g></g><g class="clink" data-x="386"><path d="M386 116v-11m10 13 8-8m-28 8-8-8m30 18h10m-42 0h-10"/><circle cx="386" cy="124" r="3"/></g></g>
+          <g class="guest guest-aunt" style="--o:205px 300px"><g class="sway" style="--s:.9deg;--d:5.1s"><use href="#dn-aunt"/><g class="fizz"><circle cx="273" cy="206" r="1.7"/><circle cx="278" cy="208" r="1.3"/><circle cx="276" cy="204" r="1.5"/></g></g><g class="clink" data-x="276"><path d="M276 178v-11m10 13 8-8m-28 8-8-8m30 18h10m-42 0h-10"/><circle cx="276" cy="186" r="3"/></g></g>
+          <g class="guest guest-grandpa" style="--o:160px 480px"><g class="sway" style="--s:.7deg;--d:5.7s"><use href="#dn-grandpa"/><g class="fizz"><circle cx="267" cy="428" r="1.7"/><circle cx="272" cy="430" r="1.3"/><circle cx="270" cy="426" r="1.5"/></g></g><g class="clink" data-x="270"><path d="M270 398v-11m10 13 8-8m-28 8-8-8m30 18h10m-42 0h-10"/><circle cx="270" cy="406" r="3"/></g></g>
+          <g class="guest guest-boy" style="--o:160px 705px"><g class="sway" style="--s:.6deg;--d:4.6s"><use href="#dn-boy"/><g class="fizz"><circle cx="267" cy="528" r="1.7"/><circle cx="272" cy="530" r="1.3"/><circle cx="270" cy="526" r="1.5"/></g></g><g class="clink" data-x="270"><path d="M270 498v-11m10 13 8-8m-28 8-8-8m30 18h10m-42 0h-10"/><circle cx="270" cy="506" r="3"/></g></g>
+          <g class="guest guest-grandma" style="--o:590px 320px"><g class="sway" style="--s:.8deg;--d:6.2s"><use href="#dn-grandma"/></g></g>
+          <g class="guest guest-uncle" style="--o:640px 500px"><g class="sway" style="--s:.7deg;--d:5.3s"><use href="#dn-uncle"/><g class="fizz"><circle cx="528" cy="392" r="1.7"/><circle cx="533" cy="394" r="1.3"/><circle cx="531" cy="390" r="1.5"/></g></g><g class="clink" data-x="530"><path d="M530 360v-11m10 13 8-8m-28 8-8-8m30 18h10m-42 0h-10"/><circle cx="530" cy="368" r="3"/></g></g>
+          <g class="guest guest-girl" style="--o:610px 700px"><g class="sway" style="--s:.6deg;--d:4.9s"><use href="#dn-girl"/><g class="fizz"><circle cx="531" cy="552" r="1.7"/><circle cx="536" cy="554" r="1.3"/><circle cx="534" cy="550" r="1.5"/></g></g><g class="clink" data-x="533"><path d="M533 520v-11m10 13 8-8m-28 8-8-8m30 18h10m-42 0h-10"/><circle cx="533" cy="528" r="3"/></g></g>
               <g fill="#a93644"><path class="party-heart" style="--dx:-60px;--r:-25deg" d="M386 150c-9-8-15-14-9-20 4-4 8-2 9 1 1-3 5-5 9-1 6 6 0 12-9 20z"/><path class="party-heart" style="--dx:40px;--r:20deg" d="M370 170c-9-8-15-14-9-20 4-4 8-2 9 1 1-3 5-5 9-1 6 6 0 12-9 20z"/><path class="party-heart" style="--dx:-20px;--r:15deg" d="M400 165c-9-8-15-14-9-20 4-4 8-2 9 1 1-3 5-5 9-1 6 6 0 12-9 20z"/><path class="party-heart" style="--dx:-90px;--r:-30deg" d="M350 190c-9-8-15-14-9-20 4-4 8-2 9 1 1-3 5-5 9-1 6 6 0 12-9 20z"/><path class="party-heart" style="--dx:80px;--r:25deg" d="M420 185c-9-8-15-14-9-20 4-4 8-2 9 1 1-3 5-5 9-1 6 6 0 12-9 20z"/><path class="party-heart" style="--dx:10px;--r:-10deg" d="M392 200c-9-8-15-14-9-20 4-4 8-2 9 1 1-3 5-5 9-1 6 6 0 12-9 20z"/><path class="party-heart" style="--dx:-40px;--r:-20deg" d="M300 260c-9-8-15-14-9-20 4-4 8-2 9 1 1-3 5-5 9-1 6 6 0 12-9 20z"/><path class="party-heart" style="--dx:50px;--r:30deg" d="M480 260c-9-8-15-14-9-20 4-4 8-2 9 1 1-3 5-5 9-1 6 6 0 12-9 20z"/></g>
             </g>
           </svg>
