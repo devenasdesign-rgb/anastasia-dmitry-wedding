@@ -85,9 +85,9 @@
 
 /* Cinematic opening: letterbox bars with credits, names written by hand */
 .film-prelude .names>span,.film-prelude .couple,.film-prelude .wedding-date{opacity:0}
-.hero-play .anastasia{animation:hand-write 1.5s cubic-bezier(.5,0,.3,1) both}
+.hero-play .dmitry{animation:hand-write 1.5s cubic-bezier(.5,0,.3,1) both}
 .hero-play .ampersand{animation:amp-pop .7s 1.1s cubic-bezier(.3,1.6,.5,1) both}
-.hero-play .dmitry{animation:hand-write 1.5s 1.3s cubic-bezier(.5,0,.3,1) both}
+.hero-play .anastasia{animation:hand-write 1.5s 1.3s cubic-bezier(.5,0,.3,1) both}
 .hero-play .couple{animation:couple-in 1.6s .9s cubic-bezier(.2,.7,.2,1) both,wedding-float 7s 3s ease-in-out infinite}
 .hero-play .wedding-date{animation:date-in .9s 2.4s ease both}
 @keyframes hand-write{from{opacity:1;clip-path:inset(-40% 100% -40% -12%)}to{opacity:1;clip-path:inset(-40% -12% -40% -12%)}}
