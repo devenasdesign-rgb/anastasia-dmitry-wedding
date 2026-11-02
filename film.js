@@ -18,6 +18,7 @@
       document.body.prepend(holder);
       hero.classList.add('scene-ready');
       dinner.classList.add('scene-ready');
+      document.querySelector('.dress-art')?.classList.add('scene-ready');
     })
     .catch(() => {});
 

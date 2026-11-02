@@ -23,18 +23,29 @@
 
 /* Story: chat bubbles arrive one by one, the letter flies between them */
 .messages-scene{position:relative;width:51.28205cqw;height:28.20513cqw;margin:0 auto 7.69231cqw}
-.messages-scene img{position:absolute;inset:0;width:100%;height:100%;margin:0;object-fit:contain}
-.dress-copy .scene-no{margin-top:0;font-size:3.3cqw;line-height:1}
-.messages-scene .msg-layer{display:none}
-.film-on .messages-scene .msg-layer{display:block}
-.film-on .messages-scene .messages{visibility:hidden}
-.film-on .msg-layer{opacity:0}
-.film-on .messages-scene.play .msg-left{animation:bubble-pop .6s cubic-bezier(.3,1.5,.5,1) both;transform-origin:20% 70%}
-.film-on .messages-scene.play .msg-right{animation:bubble-pop .6s .55s cubic-bezier(.3,1.5,.5,1) both;transform-origin:80% 80%}
-.film-on .messages-scene.play .msg-env{animation:letter-fly 1.3s .95s cubic-bezier(.3,.7,.3,1) both,letter-float 3.2s 2.3s ease-in-out infinite}
+.messages-scene .messages{display:block;width:100%;height:100%;margin:0;overflow:visible}
+.vec-icon{overflow:visible}.vec-icon .vf{fill:#fbf1e6}.vec-icon .vl{fill:#80212e}
+.vec-icon g{transform-box:fill-box}
+.film-on .messages-scene>svg>g{opacity:0}
+.film-on .messages-scene.play .msg-left{animation:bubble-pop .6s cubic-bezier(.3,1.5,.5,1) both;transform-origin:20% 90%}
+.film-on .messages-scene.play .msg-right{animation:bubble-pop .6s .55s cubic-bezier(.3,1.5,.5,1) both;transform-origin:80% 95%}
+.film-on .messages-scene.play .msg-env{transform-origin:center;animation:letter-fly 1.3s .95s cubic-bezier(.3,.7,.3,1) both,letter-float 3.2s 2.3s ease-in-out infinite}
 @keyframes bubble-pop{from{opacity:0;transform:scale(.4) translateY(8%)}to{opacity:1;transform:none}}
-@keyframes letter-fly{0%{opacity:0;transform:translate(-55%,25%) rotate(-30deg) scale(.6)}55%{opacity:1;transform:translate(-12%,-22%) rotate(10deg) scale(1.05)}100%{opacity:1;transform:none}}
-@keyframes letter-float{0%,100%{transform:none}50%{transform:translateY(-4%) rotate(-3deg)}}
+@keyframes letter-fly{0%{opacity:0;transform:translate(-120%,60%) rotate(-30deg) scale(.6)}55%{opacity:1;transform:translate(-30%,-45%) rotate(10deg) scale(1.05)}100%{opacity:1;transform:none}}
+@keyframes letter-float{0%,100%{transform:none}50%{transform:translateY(-8%) rotate(-3deg)}}
+/* Glasses clink: each glass swings on its foot, fizz pops at the touch */
+.motion-active .vec-icon.glasses{animation:none}
+.gl-left{transform-origin:22% 92%}.gl-right{transform-origin:78% 92%}
+.gl-fizz{transform-origin:50% 100%}
+.motion-active .gl-left{animation:clink-left 2.6s cubic-bezier(.5,0,.3,1) infinite}
+.motion-active .gl-right{animation:clink-right 2.6s cubic-bezier(.5,0,.3,1) infinite}
+.motion-active .gl-fizz{animation:clink-fizz 2.6s ease-out infinite}
+@keyframes clink-left{0%,100%{rotate:-14deg}38%{rotate:1.5deg}44%{rotate:-2deg}50%{rotate:0deg}70%{rotate:0deg}}
+@keyframes clink-right{0%,100%{rotate:14deg}38%{rotate:-1.5deg}44%{rotate:2deg}50%{rotate:0deg}70%{rotate:0deg}}
+@keyframes clink-fizz{0%,36%{opacity:0;scale:.3;translate:0 6px}46%{opacity:1;scale:1.15;translate:0 0}75%{opacity:0;scale:1.3;translate:0 -6px}100%{opacity:0}}
+.ring-glint{fill:#d9a24b;opacity:0;transform-box:fill-box;transform-origin:center}
+.motion-active .ring-glint{animation:ring-glint 3.2s ease-in-out infinite}
+@keyframes ring-glint{0%,55%,100%{opacity:0;scale:.2;rotate:0deg}70%{opacity:1;scale:1;rotate:45deg}85%{opacity:0;scale:.4;rotate:90deg}}
 
 /* Dinner: pinned stage, camera moves across the table while the family toasts */
 .dinner-film{position:relative}
@@ -115,3 +126,22 @@
 @keyframes motif-sway{from{translate:0 0}to{translate:0 -5px}}
 @keyframes motif-boing{0%{translate:0 0}35%{translate:0 -14px}100%{translate:0 0}}
 .closing-card{position:relative;z-index:1}
+.dress-copy .scene-no{margin-top:0;font-size:3.3cqw;line-height:1}
+
+/* Photo frame drawn in the same line style as the motifs */
+.vec-frame{overflow:visible;pointer-events:none}
+.frame-band{fill:#fbf1e6;stroke:#80212e;stroke-width:1.6}
+.frame-stitch{fill:none;stroke:#b5676c;stroke-width:1;stroke-dasharray:4 4}
+.frame-edge{fill:none;stroke:#80212e;stroke-width:1.6}
+.lace-motif{transform-box:fill-box;transform-origin:50% 90%}
+.motion-active .lace-motif{animation:motif-tilt var(--d) var(--delay) ease-in-out infinite alternate}
+@keyframes motif-tilt{from{rotate:-3deg}to{rotate:3deg}}
+
+/* Dress code: the held jacket and the one on the rack swing on their hangers */
+.dress-art{position:relative;width:100%;max-height:77cqw;aspect-ratio:2/3;margin-inline:auto}
+.motion-active .dress-art{animation:wedding-float 7s -5s ease-in-out infinite}
+.dr-held,.dr-rack{transform-box:view-box}
+.dr-held{transform-origin:238px 112px}.dr-rack{transform-origin:322px 160px}
+.motion-active .dr-held{animation:hanger-swing 3.4s ease-in-out infinite alternate}
+.motion-active .dr-rack{animation:hanger-swing 4.2s -1.3s ease-in-out infinite alternate;--swing:2deg}
+@keyframes hanger-swing{from{rotate:calc(var(--swing,3deg)*-1)}to{rotate:var(--swing,3deg)}}

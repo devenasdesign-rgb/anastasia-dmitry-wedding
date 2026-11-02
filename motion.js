@@ -16,7 +16,7 @@
     if (started || document.documentElement.classList.contains('letter-loading')) return;
     started = true;
     if (motion.matches || !('IntersectionObserver' in window)) return;
-    const selectors = '.countdown, .scene-no, .intro h2, .intro .copy, .story h2, .messages-scene, .story-copy, .memory, .dinner h2, .dinner > .copy, .dinner-illustration, .location h2, .wedding-calendar, .location h3, .location address, .venue-map, .map-link, .dress-code > img, .dress-copy, .closing-card';
+    const selectors = '.countdown, .scene-no, .intro h2, .intro .copy, .story h2, .messages-scene, .story-copy, .memory, .dinner h2, .dinner > .copy, .dinner-illustration, .location h2, .wedding-calendar, .location h3, .location address, .venue-map, .map-link, .dress-art, .dress-copy, .closing-card';
     observer = new IntersectionObserver(entries => {
       let order = 0;
       for (const entry of entries) {
@@ -28,7 +28,7 @@
     }, { threshold: 0.08, rootMargin: '0px 0px -12px 0px' });
     for (const element of main.querySelectorAll(selectors)) {
       element.classList.add('reveal');
-      if (element.matches('.memory, .dinner-illustration, .couple, .dress-code > img')) element.classList.add('reveal-art');
+      if (element.matches('.memory, .dinner-illustration, .couple, .dress-art')) element.classList.add('reveal-art');
       observer.observe(element);
     }
     main.classList.add('motion-active');
